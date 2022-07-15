@@ -28,25 +28,25 @@ To create an instance of each of the class objects, follow the instructions belo
 * Defaults to a weight of 1 for all faces.
 
 Example:  
-`# create a standard 6-sided die`  
-`faces = np.array([1, 2, 3, 4, 5, 6])`  
-`die = Die(faces)`
+`# create a standard 6-sided die   
+faces = np.array([1, 2, 3, 4, 5, 6])  
+die = Die(faces)`
 
 ### Game Class
 `Game(die_list)`  
 * Input parameter: A list of one or more Die objects built from the same array of faces. May contain differently weighted faces.  
 
 Example:  
-`# create a game of 3 6-sided die`  
-`die_list = [die, die, die]`  
-`game = Game(die_list)`
+`# create a game of 3 6-sided die  
+die_list = [die, die, die]  
+game = Game(die_list)`
 
 ### Analyzer Class
 `Analyzer(game)`  
 * Input parameter: A Game object.
 
 Example:  
-`# create an analyzer with the Game object instantiated above.`  
-`analyzer = Analyzer(game)`
+`# create an analyzer with the Game object instantiated above.  
+analyzer = Analyzer(game)`
 
 
