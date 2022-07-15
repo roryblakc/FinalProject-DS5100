@@ -169,24 +169,16 @@ To create an instance of each of the class objects, follow the instructions belo
 
 # Manifest
 
-List of all files in the repo.
+Below is the structure of the files within this repo.
 
 MonteCarlo
-
-    \__init\__.py
-
+    __init__.py
     montecarlo.py
-
 .gitignore
-
 LICENSE
-
 README.md
-
 montecarlo_demo.ipynb
-
 montecarlo_results.txt
-
 setup.py
 
 
