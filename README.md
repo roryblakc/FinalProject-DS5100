@@ -19,7 +19,7 @@ To import each class, execute the code below. All methods from all three classes
 * `from montecarlo import Game`
 * `from montecarlo import Analyzer`
 
-## Creating Objects
+## Using the Classes
 To create an instance of each of the class objects, follow the instructions below.
 
 ### Die Class
@@ -44,7 +44,20 @@ To create an instance of each of the class objects, follow the instructions belo
 Example:  
 `# create a standard 6-sided die`   
 `faces = np.array([1, 2, 3, 4, 5, 6])`  
-`die = Die(faces)`
+`die = Die(faces)`  
+`die.change_weight(1, 2)`  
+`die.roll(3)`  
+[1, 4, 1]  
+`die.show_current()`  
+| Face  | Weight |
+| ----- | ------ |
+| 1     | 2      |
+| 2     | 1      |
+| 3     | 1      |
+| 4     | 1      |
+| 5     | 1      |
+| 6     | 1      |
+
 
 ### Game Class
 `Game(die_list)`  
