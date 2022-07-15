@@ -9,8 +9,8 @@ The Monte Carlo simulator is comprised of three classes: **Die**, **Game**, **An
 
 ## Installing and Importing
 To install the package, navigate to head directory. Execute the code below.
-* `pip install -e .`\n
-Instalation is successful if you are returned the following line. \n
+* `pip install -e .`  
+Instalation is successful if you are returned the following line.  
 Successfully installed MonteCarloPackage
 
 To import each class, execute the code below.
