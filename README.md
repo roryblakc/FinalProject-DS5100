@@ -173,9 +173,9 @@ List of all files in the repo.
 
 ├── TMonteCarlo
 
-│   ├── __init__.py
+│   __init__.py
 
-│   ├── montecarlo.py
+│   montecarlo.py
 
 ├── .gitignore
 
