@@ -7,5 +7,6 @@ setup(name = 'MonteCarloPackage',
     author_email = 'qmn9tb@virginia.edu',
     description = 'Implementation of a simple Monte Carlo simulator using a set of related classes.',
     url = 'https://github.com/roryblakc/FinalProject-DS5100',
-    license = 'MIT'
+    license = 'MIT',
+    install_requires = ['numpy >= 1.12.1', 'pandas >= 1.4.2', 'IPython >= 7.12.0']
 )
