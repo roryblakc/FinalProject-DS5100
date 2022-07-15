@@ -23,11 +23,22 @@ To import each class, execute the code below. All methods from all three classes
 To create an instance of each of the class objects, follow the instructions below.
 
 ### Die Class
-* Input parameter: A numpy array of die faces.
+`Die(faces)`  
+* Input parameter: A numpy array of die faces.  
+* Defaults to a weight of 1 for all faces.
 
-Example:
-`# create a standard 6-sided die`
-`faces = np.array([1, 2, 3, 4, 5, 6])`
+Example:  
+`# create a standard 6-sided die`  
+`faces = np.array([1, 2, 3, 4, 5, 6])`  
 `die = Die(faces)`
+
+### Game Class
+`Game(die_list)`  
+* Input parameter: A list of one or more Die objects built from the same array of faces. May contain differently weighted faces.  
+
+Example:  
+`# create a game of 3 6-sided die`  
+`die_list = [die, die, die]`  
+`game = Game(die_list)`
 
 
