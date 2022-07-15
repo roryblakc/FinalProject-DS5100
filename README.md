@@ -163,5 +163,30 @@ To create an instance of each of the class objects, follow the instructions belo
 * `.face_dtype` -- the data type of the faces of the list of die  
 * `.num_jackpots` -- the number of jackpots counted upon calling the `jackpot()` method
 * `.jackpot_df` -- a dataframe containing booleans indicated whether or not a single roll resulted in a jackpot
-* `combo_df` -- a dataframe displaying the counts of each combination of rolls upon calling the `.combo()` method
+* `.combo_df` -- a dataframe displaying the counts of each combination of rolls upon calling the `.combo()` method
 * `.face_counts_df` -- a dataframe displaying the counts of each face appearing with each roll upon calling the `.face_counts_per_roll()` method
+
+
+# Manifest
+
+List of all files in the repo.
+
+├── TMonteCarlo
+
+│   ├── __init__.py
+
+│   ├── montecarlo.py
+
+├── .gitignore
+
+├── LICENSE
+
+├── README.md
+
+├── montecarlo_demo.ipynb
+
+├── montecarlo_results.txt
+
+├── setup.py
+
+
