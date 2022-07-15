@@ -24,7 +24,7 @@ To create an instance of each of the class objects, follow the instructions belo
 
 ### Die Class  
 
-Example:  
+#### Demo:  
 `# create a standard 6-sided die`   
 `faces = np.array([1, 2, 3, 4, 5, 6])`  
 `die = Die(faces)`  
@@ -43,19 +43,8 @@ Example:
 
 
 ### Game Class
-`Game(die_list)`  
-* Input parameter: A list of one or more Die objects built from the same array of faces. May contain differently weighted faces.  
 
-#### Attributes
-* `.die_list` -- the list of Die objects
-
-#### Methods
-* `play(num_rolls)`
-  * Simulate rolling a list of dice one or more times. No return value, but results are stored in dataframe.
-* `show_play(form="wide")`
-  * Returns a dataframe displaying the results of the `play()` method. The user can specify either 'wide' or 'narrow'. Defaults to 'wide'.
-
-Example:  
+#### Demo: 
 `# create a game of 3 6-sided die`  
 `die_list = [die, die, die]`  
 `game = Game(die_list)`  
@@ -83,27 +72,8 @@ Example:
 
 
 ### Analyzer Class
-`Analyzer(game)`  
-* Input parameter: A Game object.
 
-#### Attributes
-* `.game` -- the Game object from which the Analyzer object was constructed
-* `.face_dtype` -- the data type of the faces of the list of die  
-* `.num_jackpots` -- the number of jackpots counted upon calling the `jackpot()` method
-* `.jackpot_df` -- a dataframe containing booleans indicated whether or not a single roll resulted in a jackpot
-* `combo_df` -- a dataframe displaying the counts of each combination of rolls upon calling the `.combo()` method
-* `.face_counts_df` -- a dataframe displaying the counts of each face appearing with each roll upon calling the `.face_counts_per_roll()` method
-
-#### Methods
-* `jackpot()`
-  * Evaluate how many rolls returned the same face for all dice. Returns an integer of the number of jackpots.  
-* `combo()`
-  * Evaluate the counts of combinations of rolls and faces returned. No return value.  
-* `face_counts_per_roll()`
-  * Evaluate which faces are returned with each roll. No return value.
-
-
-Example:  
+#### Demo:  
 `# create an analyzer with the Game object instantiated above.`  
 `analyzer = Analyzer(game)`  
 `analyzer.jackpot()`  
@@ -140,8 +110,9 @@ Example:
 ## Die Class  
 `Die(faces)`  
 
-### Parameter: A numpy array of die faces.  
-* Defaults to a weight of 1 for all faces.
+### Parameter  
+* A numpy array of die faces.  
+  * Defaults to a weight of 1 for all faces.
 
 ### Methods
 * `change_weight(face, weight)`
@@ -159,3 +130,41 @@ Example:
 ### Documentation
 * Create a Die object to then be able to change the weight of any faces and simulate rolling the die. Object is initialized with the input of an array of faces.  
 
+
+## Game Class
+`Game(die_list)` 
+
+### Parameter  
+* A list of one or more Die objects built from the same array of faces. May contain differently weighted faces.  
+
+### Methods
+* `play(num_rolls)`
+  * Simulate rolling a list of dice one or more times. No return value, but results are stored in dataframe.
+* `show_play(form="wide")`
+  * Returns a dataframe displaying the results of the `play()` method. The user can specify either 'wide' or 'narrow'. Defaults to 'wide'.
+
+### Attributes
+* `.die_list` -- the list of Die objects
+
+
+## Analyzer Class
+`Analyzer(game)`  
+
+### Parameter
+* A Game object.
+
+### Methods
+* `jackpot()`
+  * Evaluate how many rolls returned the same face for all dice. Returns an integer of the number of jackpots.  
+* `combo()`
+  * Evaluate the counts of combinations of rolls and faces returned. No return value.  
+* `face_counts_per_roll()`
+  * Evaluate which faces are returned with each roll. No return value.
+
+### Attributes
+* `.game` -- the Game object from which the Analyzer object was constructed
+* `.face_dtype` -- the data type of the faces of the list of die  
+* `.num_jackpots` -- the number of jackpots counted upon calling the `jackpot()` method
+* `.jackpot_df` -- a dataframe containing booleans indicated whether or not a single roll resulted in a jackpot
+* `combo_df` -- a dataframe displaying the counts of each combination of rolls upon calling the `.combo()` method
+* `.face_counts_df` -- a dataframe displaying the counts of each face appearing with each roll upon calling the `.face_counts_per_roll()` method
