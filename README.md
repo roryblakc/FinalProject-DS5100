@@ -133,15 +133,18 @@ Example:
 | Roll # 2 | False   |
 | Roll # 3 | True    |
 
-`analyzer.combo()`
-`analyzer.combo_df`
+`analyzer.combo()`  
+`analyzer.combo_df`  
+
 |          |         |         | Counts   |
 | -------- | ------- | ------- | -------- |
 |  Die 1   | Die 2   | Die 3   |          |
 |  1       | 1       | 1       | 1        |
 |          | 6       | 3       | 1        |
 |  2       | 5       | 3       | 1        |
+
 `analyzer.face_counts_per_roll()`  
+
 |          | 1    | 2    | 3    | 4    | 5    | 6    |
 | -------- | ---- | ---- | ---- | ---- | ---- | ---- |
 | Roll # 1 | 2    | 1    | 0    | 0    | 0    | 0    |
