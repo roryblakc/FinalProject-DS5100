@@ -5,6 +5,7 @@ import random
 class Die:
     '''Create a Die object to then be able to change the weight of any faces and simulate rolling the die. Object is initialized with the input of an array of faces.'''
     def __init__(self, faces):
+        '''Create a Die object with input parameter of an array of faces. Weights default to 1 for every face. No return value.'''
         self.faces = faces
         self.weights = np.ones(len(faces))
         self.die_df = pd.DataFrame({
@@ -40,6 +41,7 @@ class Game:
     '''Create a Game object from a list of one or more Die objects of the same kind to simulate rolling multiple dice.'''
     # all die in die list must have same faces
     def __init__(self, die_list):
+        '''Create a Game object with input parameter of a list of Die objects of the same kind. No return value.'''
         self.die_list = die_list
     
     def play(self, num_rolls):
@@ -79,6 +81,7 @@ class Game:
 class Analyzer:
     '''Create an Analyzer object to reveal information about a Game object. Object is initialized with the input of an existing Game object.'''
     def __init__(self, game):
+        '''Create an Analyzer obejct with the input of an already existing Game object. No return value.'''
         self.game = game
         self.face_dtype = type(self.game.die_list[0].faces[0])
         
