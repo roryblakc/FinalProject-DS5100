@@ -22,17 +22,7 @@ To import each class, execute the code below. All methods from all three classes
 ## Using the Classes
 To create an instance of each of the class objects, follow the instructions below.
 
-### Die Class
-`Die(faces)`  
-
-#### Methods
-* `change_weight(face, weight)`
-  * Change the weight of any face. No return value.
-* `roll(num_rolls=1)`
-  * Simulate rolling the die. Defaults to 1 roll. Returns the list of rolls.
-* `show_current()`
-  * View the dataframe with the current faces and corresponding weights.
-
+### Die Class  
 
 Example:  
 `# create a standard 6-sided die`   
@@ -145,14 +135,27 @@ Example:
 | Roll # 3 | 1    | 0    | 2    | 0    | 0    | 0    |
 
 
-# API Description
+# API Description  
 
 ## Die Class  
-* Documentation
-  * Create a Die object to then be able to change the weight of any faces and simulate rolling the die. Object is initialized with the input of an array of faces.  
-* Parameter: A numpy array of die faces.  
+`Die(faces)`  
+
+### Parameter: A numpy array of die faces.  
 * Defaults to a weight of 1 for all faces.
-* Attributes
-  *`.faces` -- the array of faces
-  * `.weights` -- an array of weights
-  * `.die_df` -- a dataframe containing faces and corresponding weights
+
+### Methods
+* `change_weight(face, weight)`
+  * Change the weight of any face. No return value.
+* `roll(num_rolls=1)`
+  * Simulate rolling the die. Defaults to 1 roll. Returns the list of rolls.
+* `show_current()`
+  * View the dataframe with the current faces and corresponding weights.  
+
+### Attributes  
+* `.faces` -- the array of faces
+* `.weights` -- an array of weights
+* `.die_df` -- a dataframe containing faces and corresponding weights
+  
+### Documentation
+* Create a Die object to then be able to change the weight of any faces and simulate rolling the die. Object is initialized with the input of an array of faces.  
+
