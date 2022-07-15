@@ -80,6 +80,7 @@ Example:
 `game.play(5)`  
 `game.show_play()`
 |          | Die 1   | Die 2   | Die 3   |
+| -------- | ------- | ------- | ------- |
 | Roll # 1 | 1       | 6       | 3       |
 | Roll # 2 | 2       | 5       | 3       |
 | Roll # 3 | 1       | 1       | 1       |
