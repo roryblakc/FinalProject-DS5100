@@ -8,7 +8,7 @@
 The Monte Carlo simulator is comprised of three classes: **Die**, **Game**, **Analyzer**.
 
 ## Installing and Importing
-To install the package, navigate to head directory. Execute the code below.
+To install the package, navigate to the root of this directory. Execute the code below.
 * `pip install -e .`  
 
 Instalation is successful if you are returned the following line.  
@@ -40,5 +40,13 @@ Example:
 `# create a game of 3 6-sided die`  
 `die_list = [die, die, die]`  
 `game = Game(die_list)`
+
+### Analyzer Class
+`Analyzer(game)`  
+* Input parameter: A Game object.
+
+Example:  
+`# create an analyzer with the Game object instantiated above.`  
+`analyzer = Analyzer(game)`
 
 
