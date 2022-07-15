@@ -27,6 +27,20 @@ To create an instance of each of the class objects, follow the instructions belo
 * Input parameter: A numpy array of die faces.  
 * Defaults to a weight of 1 for all faces.
 
+#### Attributes
+* .faces -- the array of faces
+* .weights -- an array of weights
+* .die_df -- a dataframe containing faces and corresponding weights
+
+#### Methods
+* `change_weight(face, weight)`
+  * Change the weight of any face. No return value.
+* `roll(num_rolls=1)`
+  * Simulate rolling the die. Defaults to 1 roll. Returns the list of rolls.
+* `show_current()`
+  * View the dataframe with the current faces and corresponding weights.
+
+
 Example:  
 `# create a standard 6-sided die`   
 `faces = np.array([1, 2, 3, 4, 5, 6])`  
