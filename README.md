@@ -28,9 +28,9 @@ To create an instance of each of the class objects, follow the instructions belo
 * Defaults to a weight of 1 for all faces.
 
 #### Attributes
-* .faces -- the array of faces
-* .weights -- an array of weights
-* .die_df -- a dataframe containing faces and corresponding weights
+* `.faces` -- the array of faces
+* `.weights` -- an array of weights
+* `.die_df` -- a dataframe containing faces and corresponding weights
 
 #### Methods
 * `change_weight(face, weight)`
@@ -63,10 +63,29 @@ Example:
 `Game(die_list)`  
 * Input parameter: A list of one or more Die objects built from the same array of faces. May contain differently weighted faces.  
 
+#### Attributes
+* `.die_list` -- the list of Die objects
+* `._play_df` -- protected dataframe of all rolls upon calling the `play()` method
+
+#### Methods
+* `play(num_rolls)`
+  * Simulate rolling a list of dice one or more times. No return value, but results are stored in dataframe.
+* `show_play(form="wide")`
+  * Returns a dataframe displaying the results of the `play()` method. The user can specify either 'wide' or 'narrow'. Defaults to 'wide'.
+
 Example:  
 `# create a game of 3 6-sided die`  
 `die_list = [die, die, die]`  
-`game = Game(die_list)`
+`game = Game(die_list)`  
+`game.play(5)`  
+`game.show_play()`
+|          | Die 1   | Die 2   | Die 3   |
+| Roll # 1 | 1       | 6       | 3       |
+| Roll # 2 | 2       | 5       | 3       |
+| Roll # 3 | 1       | 1       | 1       |
+| Roll # 4 | 4       | 2       | 4       |
+| Roll # 5 | 6       | 3       | 5       |
+
 
 ### Analyzer Class
 `Analyzer(game)`  
