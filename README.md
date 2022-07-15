@@ -22,9 +22,8 @@ To import each class, execute the code below. All methods from all three classes
 ## Using the Classes
 To create an instance of each of the class objects, follow the instructions below.
 
-### Die Class  
+### Die Class Demo
 
-#### Demo:  
 `# create a standard 6-sided die`   
 `faces = np.array([1, 2, 3, 4, 5, 6])`  
 `die = Die(faces)`  
@@ -42,9 +41,8 @@ To create an instance of each of the class objects, follow the instructions belo
 | 6     | 1      |
 
 
-### Game Class
+### Game Class Demo
 
-#### Demo: 
 `# create a game of 3 6-sided die`  
 `die_list = [die, die, die]`  
 `game = Game(die_list)`  
@@ -71,9 +69,8 @@ To create an instance of each of the class objects, follow the instructions belo
 
 
 
-### Analyzer Class
+### Analyzer Class Demo
 
-#### Demo:  
 `# create an analyzer with the Game object instantiated above.`  
 `analyzer = Analyzer(game)`  
 `analyzer.jackpot()`  
