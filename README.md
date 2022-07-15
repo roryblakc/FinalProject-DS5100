@@ -77,15 +77,27 @@ Example:
 `# create a game of 3 6-sided die`  
 `die_list = [die, die, die]`  
 `game = Game(die_list)`  
-`game.play(5)`  
+`game.play(3)`  
 `game.show_play()`
 |          | Die 1   | Die 2   | Die 3   |
 | -------- | ------- | ------- | ------- |
 | Roll # 1 | 1       | 6       | 3       |
 | Roll # 2 | 2       | 5       | 3       |
 | Roll # 3 | 1       | 1       | 1       |
-| Roll # 4 | 4       | 2       | 4       |
-| Roll # 5 | 6       | 3       | 5       |
+
+`game.show_play('narrow')`  
+|          |         | Face Returned |
+| -------- | ------- | ------------- |
+| Roll # 1 | Die 1   | 1             |
+|          | Die 2   | 6             |
+|          | Die 3   | 3             |
+| Roll # 2 | Die 1   | 2             |
+|          | Die 2   | 5             |
+|          | Die 3   | 3             |
+| Roll # 3 | Die 1   | 1             |
+|          | Die 2   | 1             |
+|          | Die 3   | 1             |
+
 
 
 ### Analyzer Class
