@@ -107,6 +107,9 @@ To create an instance of each of the class objects, follow the instructions belo
 ## Die Class  
 `Die(faces)`  
 
+### Documentation
+* Create a Die object to then be able to change the weight of any faces and simulate rolling the die. Object is initialized with the input of an array of faces.  
+
 ### Parameter  
 * A numpy array of die faces.  
   * Defaults to a weight of 1 for all faces.
@@ -122,14 +125,14 @@ To create an instance of each of the class objects, follow the instructions belo
 ### Attributes  
 * `.faces` -- the array of faces
 * `.weights` -- an array of weights
-* `.die_df` -- a dataframe containing faces and corresponding weights
-  
-### Documentation
-* Create a Die object to then be able to change the weight of any faces and simulate rolling the die. Object is initialized with the input of an array of faces.  
+* `.die_df` -- a dataframe containing faces and corresponding weights 
 
 
 ## Game Class
 `Game(die_list)` 
+
+### Documentation
+* Create a Game object from a list of one or more Die objects of the same kind to simulate rolling multiple dice.
 
 ### Parameter  
 * A list of one or more Die objects built from the same array of faces. May contain differently weighted faces.  
@@ -146,6 +149,9 @@ To create an instance of each of the class objects, follow the instructions belo
 
 ## Analyzer Class
 `Analyzer(game)`  
+
+### Documentation 
+* Create an Analyzer object to reveal information about a Game object. Object is initialized with the input of an existing Game object.
 
 ### Parameter
 * A Game object.
