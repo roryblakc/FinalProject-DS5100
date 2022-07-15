@@ -144,6 +144,7 @@ Example:
 |  2       | 5       | 3       | 1        |
 
 `analyzer.face_counts_per_roll()`  
+`analyzer.face_counts_df`  
 
 |          | 1    | 2    | 3    | 4    | 5    | 6    |
 | -------- | ---- | ---- | ---- | ---- | ---- | ---- |
