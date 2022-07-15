@@ -115,6 +115,8 @@ To create an instance of each of the class objects, follow the instructions belo
   * Defaults to a weight of 1 for all faces.
 
 ### Methods
+* `__init__(faces)`  
+  * Create a Die object with input parameter of an array of faces. Weights default to 1 for every face. No return value.
 * `change_weight(face, weight)`
   * Change the weight of any face. No return value.
 * `roll(num_rolls=1)`
@@ -138,6 +140,8 @@ To create an instance of each of the class objects, follow the instructions belo
 * A list of one or more Die objects built from the same array of faces. May contain differently weighted faces.  
 
 ### Methods
+* `__init__(die_list)`
+  * Create a Game object from a list of one or more Die objects of the same kind to simulate rolling multiple dice.
 * `play(num_rolls)`
   * Simulate rolling a list of dice one or more times. No return value, but results are stored in dataframe.
 * `show_play(form="wide")`
@@ -157,6 +161,8 @@ To create an instance of each of the class objects, follow the instructions belo
 * A Game object.
 
 ### Methods
+* `__init(game)`
+  * Create an Analyzer object to reveal information about a Game object. Object is initialized with the input of an existing Game object.
 * `jackpot()`
   * Evaluate how many rolls returned the same face for all dice. Returns an integer of the number of jackpots.  
 * `combo()`
