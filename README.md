@@ -104,8 +104,48 @@ Example:
 `Analyzer(game)`  
 * Input parameter: A Game object.
 
+#### Attributes
+* `.game` -- the Game object from which the Analyzer object was constructed
+* `.face_dtype` -- the data type of the faces of the list of die  
+* `.num_jackpots` -- the number of jackpots counted upon calling the `jackpot()` method
+* `.jackpot_df` -- a dataframe containing booleans indicated whether or not a single roll resulted in a jackpot
+* `combo_df` -- a dataframe displaying the counts of each combination of rolls upon calling the `.combo()` method
+* `.face_counts_df` -- a dataframe displaying the counts of each face appearing with each roll upon calling the `.face_counts_per_roll()` method
+
+#### Methods
+* `jackpot()`
+  * Evaluate how many rolls returned the same face for all dice. Returns an integer of the number of jackpots.  
+* `combo()`
+  * Evaluate the counts of combinations of rolls and faces returned. No return value.  
+* `face_counts_per_roll()`
+  * Evaluate which faces are returned with each roll. No return value.
+
+
 Example:  
 `# create an analyzer with the Game object instantiated above.`  
-`analyzer = Analyzer(game)`
+`analyzer = Analyzer(game)`  
+`analyzer.jackpot()`  
+1  
+`analyzer.jackpot_df`  
+|          | Jackpot |
+| -------- | ------- |
+| Roll # 1 | False   |
+| Roll # 2 | False   |
+| Roll # 3 | True    |
+
+`analyzer.combo()`
+`analyzer.combo_df`
+|          |         |         | Counts   |
+| -------- | ------- | ------- | -------- |
+|  Die 1   | Die 2   | Die 3   |          |
+|  1       | 1       | 1       | 1        |
+|          | 6       | 3       | 1        |
+|  2       | 5       | 3       | 1        |
+`analyzer.face_counts_per_roll()`  
+|          | 1    | 2    | 3    | 4    | 5    | 6    |
+| -------- | ---- | ---- | ---- | ---- | ---- | ---- |
+| Roll # 1 | 2    | 1    | 0    | 0    | 0    | 0    |
+| Roll # 2 | 1    | 0    | 0    | 0    | 1    | 1    |
+| Roll # 3 | 1    | 0    | 2    | 0    | 0    | 0    |
 
 
