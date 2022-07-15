@@ -171,22 +171,22 @@ To create an instance of each of the class objects, follow the instructions belo
 
 List of all files in the repo.
 
-├── TMonteCarlo
+MonteCarlo
 
-│   __init__.py
+    \__init\__.py
 
-│   montecarlo.py
+    montecarlo.py
 
-├── .gitignore
+.gitignore
 
-├── LICENSE
+LICENSE
 
-├── README.md
+README.md
 
-├── montecarlo_demo.ipynb
+montecarlo_demo.ipynb
 
-├── montecarlo_results.txt
+montecarlo_results.txt
 
-├── setup.py
+setup.py
 
 
